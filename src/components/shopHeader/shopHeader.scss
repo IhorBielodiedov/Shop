@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap');
+.shop {
+    &__header{
+        width: 100%;
+        background: #FFFFFF;
+        box-shadow: 5px 5px 75px rgba(210, 213, 234, 0.45);
+        border-radius: 6px 0px 0px 6px;
+    }
+    &__menu {
+        padding: 20px 22px;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: #8A8A9D;
+            li {
+            }
+        }
+    }
+}

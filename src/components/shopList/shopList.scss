@@ -1,0 +1,10 @@
+.shop-list {
+    width: 100%;
+    &__list{
+        margin-top: 24px;
+        grid-gap: 14px;
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+    }
+}
