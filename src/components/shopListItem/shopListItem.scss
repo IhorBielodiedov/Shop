@@ -10,9 +10,11 @@
         border-radius: 6px 0px 0px 6px; 
     }
     &__img{
-        padding: 0 66px;
+        padding: 0 70px;
         img {
             width: 205px;
+            height: 247px;
+            object-fit: cover;
         }
     }
     &-label {
@@ -32,11 +34,22 @@
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 23px;
             line-height: 25px;
             display: flex;
             align-items: center;
             color:#3A63E0;
+        }
+        &__dollar {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 25px;
+        }
+        &__rating {
+            display: flex;
+            justify-content: left;
         }
     }
 }
