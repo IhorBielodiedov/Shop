@@ -3,14 +3,17 @@ import {useHttp} from '../../hooks/http.hook';
 
 const initialState = {
     products: [],
-    productsLoadingStatus: 'idle'
+    productsLoadingStatus: 'idle',
+    countOfProducts: 9
 }
 
 export const fetchProducts = createAsyncThunk(
     'products/fetchProducts',
-    () => {
+    (arg, {getState}) => {
+        const state = getState();
         const {request} = useHttp();
-        return request('https://fakestoreapi.com/products');
+        console.log("fetchProducts" + state.countOfProducts);
+        return request(`https://fakestoreapi.com/products?limit=${state.countOfProducts}`);
     }
 );
 
@@ -18,7 +21,10 @@ const shopListSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-
+        productsAdd: (state, action) => {
+            state.countOfProducts = state.countOfProducts + action.payload;
+            console.log("productsAdd" + state.countOfProducts);
+        }
     },
     extraReducers: (builder) => {
         builder
@@ -33,6 +39,10 @@ const shopListSlice = createSlice({
     }
 });
 
-const {reducer} = shopListSlice;
+const {actions, reducer} = shopListSlice;
 
 export default reducer;
+
+export const {
+    productsAdd
+} = actions;
