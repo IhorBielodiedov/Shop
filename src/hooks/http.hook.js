@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const useHttp = () => {
     // const [process, setProcess] = useState('waiting');
 
@@ -6,15 +8,17 @@ export const useHttp = () => {
         // setProcess('loading');
 
         try {
-            const response = await fetch(url, {method, body, headers});
+            const response = await axios.get(url)
 
-            if (!response.ok) {
-                throw new Error(`Could not fetch ${url}, status: ${response.status}`);
-            }
+            // const response = await fetch(url, {method, body, headers});
 
-            const data = await response.json();
+            // if (!response.ok) {
+            //     throw new Error(`Could not fetch ${url}, status: ${response.status}`);
+            // }
 
-            return data;
+            // const data = await response.json();
+            
+            return response.data;
         } catch(e) {
             // setProcess('error');
             throw e;

@@ -4,7 +4,8 @@ import {useHttp} from '../../hooks/http.hook';
 const initialState = {
     products: [],
     productsLoadingStatus: 'idle',
-    countOfProducts: 9
+    countOfProducts: 9,
+    newItemLoading: false
 }
 
 export const fetchProducts = createAsyncThunk(
@@ -22,6 +23,7 @@ const shopListSlice = createSlice({
     initialState,
     reducers: {
         productsAdd: (state, action) => {
+            state.newItemLoading = true;
             state.countOfProducts = state.countOfProducts + action.payload;
             console.log("productsAdd" + state.countOfProducts);
         }

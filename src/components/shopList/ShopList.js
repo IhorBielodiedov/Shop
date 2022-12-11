@@ -6,10 +6,22 @@ import { fetchProducts, productsAdd } from './shopListSlice';
 import Spinner from '../spinner/Spinner';
 import './shopList.scss';
 
+const setContent = (process, Component, newItemLoading) => {
+    if (process === "idle") {
+        return <Component/>
+    }
+    else if (process === "loading") {
+        return newItemLoading ? <Component/> : <Spinner/>;
+    } else if (process === "error") {
+        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
+    }
+}
+
 const ShopList = () => {
     const products = useSelector(state => state.products);
     const productsLoadingStatus = useSelector(state => state.productsLoadingStatus);
     const countOfProducts = useSelector(state => state.countOfProducts);
+    const newItemLoading = useSelector(state => state.newItemLoading);
 
     const dispatch = useDispatch();
     const {request} = useHttp();
@@ -19,12 +31,6 @@ const ShopList = () => {
 
         // eslint-disable-next-line
     }, [countOfProducts]);
-
-    if (productsLoadingStatus === "loading") {
-        return <Spinner/>;
-    } else if (productsLoadingStatus === "error") {
-        return <h5 className="text-center mt-5">Ошибка загрузки</h5>
-    }
 
     const pagination = (value) => {
         dispatch(productsAdd(value));
@@ -42,12 +48,14 @@ const ShopList = () => {
             )
         })
     }
-    console.log(products);
     const elements = renderProductsList(products);
     return (
-        <div className='shop-list__list'>
-            {elements}
-            <button
+        <div className='shop-list'>
+            <div className='shop-list__list'>
+                {setContent(productsLoadingStatus, () => renderProductsList(products), newItemLoading)}
+            </div>
+            <button className='shop-list__button'
+            disabled={newItemLoading}
             onClick={() => pagination(9)}
             >
                 Load More

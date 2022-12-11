@@ -1,5 +1,5 @@
-import ShopHeader from "../shopHeader/ShopHeader";
-import ShopList from "../shopList/ShopList";
+import ShopHeader from "../components/shopHeader/ShopHeader";
+import ShopList from "../components/shopList/ShopList";
 
 const MainPage = () => {
     return (
