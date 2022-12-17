@@ -2,6 +2,7 @@ import ShopListItem from '../shopListItem/ShopListItem';
 import {useHttp} from '../../hooks/http.hook';
 import { useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import {Link} from 'react-router-dom';
 import { fetchProducts, productsAdd } from './shopListSlice';
 import Spinner from '../spinner/Spinner';
 import './shopList.scss';
@@ -18,10 +19,10 @@ const setContent = (process, Component, newItemLoading) => {
 }
 
 const ShopList = () => {
-    const products = useSelector(state => state.products);
-    const productsLoadingStatus = useSelector(state => state.productsLoadingStatus);
-    const countOfProducts = useSelector(state => state.countOfProducts);
-    const newItemLoading = useSelector(state => state.newItemLoading);
+    const products = useSelector(state => state.products.products);
+    const productsLoadingStatus = useSelector(state => state.products.productsLoadingStatus);
+    const countOfProducts = useSelector(state => state.products.countOfProducts);
+    const newItemLoading = useSelector(state => state.products.newItemLoading);
 
     const dispatch = useDispatch();
     const {request} = useHttp();
@@ -31,7 +32,7 @@ const ShopList = () => {
 
         // eslint-disable-next-line
     }, [countOfProducts]);
-
+    console.log(products);
     const pagination = (value) => {
         dispatch(productsAdd(value));
     }
@@ -42,9 +43,11 @@ const ShopList = () => {
             )
         }
 
-        return arr.map(({...props}) => {
+        return arr.map(({id, ...props}) => {
             return (
-                    <ShopListItem  {...props}/>
+                <Link to={`/product/${id}`}>
+                    <ShopListItem key={id} {...props}/>
+                </Link>
             )
         })
     }

@@ -1,5 +1,6 @@
 import clock from '../../resources/imgClock.png';
 import './shopListItem.scss';
+
 import starFull from '../../resources/starFull.svg';
 import starEmpty from '../../resources/starEmpty.svg';
 
@@ -19,18 +20,18 @@ const ShopListItem = ({title, price, image, rating}) => {
         return str;
     }
     return (
-        <div className="shop-list__item">
-            <div className='shop-list__img'>
-                <img src={image} alt="clock"/>
+            <div className="shop-list__item">
+                <div className='shop-list__img'>
+                    <img src={image} alt="clock"/>
+                </div>
+            <div className='shop-list-label'>
+                <div>
+                    <p className='shop-list-label__name'>`${title.slice(0, 15)}...`</p>
+                    <div className='shop-list-label__rating' dangerouslySetInnerHTML={{__html:renderRatingStars(rating.rate)}}></div>
+                </div>
+                <p className='shop-list-label__price'><span className='shop-list-label__dollar'>$</span>{price}</p>
             </div>
-           <div className='shop-list-label'>
-            <div>
-                <p className='shop-list-label__name'>`${title.slice(0, 15)}...`</p>
-                <div className='shop-list-label__rating' dangerouslySetInnerHTML={{__html:renderRatingStars(rating.rate)}}></div>
             </div>
-            <p className='shop-list-label__price'><span className='shop-list-label__dollar'>$</span>{price}</p>
-           </div>
-        </div>
     )
 }
 

@@ -1,0 +1,8 @@
+.single-product {
+    display: flex;
+    &__img{
+        width: 590px;
+        height: 711px;
+        object-fit: contain;
+    }
+}

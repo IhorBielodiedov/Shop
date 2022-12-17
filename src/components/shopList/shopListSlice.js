@@ -13,8 +13,7 @@ export const fetchProducts = createAsyncThunk(
     (arg, {getState}) => {
         const state = getState();
         const {request} = useHttp();
-        console.log("fetchProducts" + state.countOfProducts);
-        return request(`https://fakestoreapi.com/products?limit=${state.countOfProducts}`);
+        return request(`https://fakestoreapi.com/products?limit=${state.products.countOfProducts}`);
     }
 );
 
