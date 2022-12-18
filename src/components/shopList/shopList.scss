@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap');
 .shop-list {
-    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;

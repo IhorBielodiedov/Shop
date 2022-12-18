@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;400;700&display=swap');
 
 .single-product {
+    position: relative;
+    top:-77px;
     display: flex;
     grid-gap: 40px;
     width: 100%;
-    padding-top: 70px;
+    padding-top: 147px;
+    padding-bottom: 100px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: #ffffff;
+    z-index: 1;
     &__img{
         
         img {
@@ -71,6 +75,10 @@
             padding: 30px 0;
             background: none;
             border: 1px solid black;
+            cursor: pointer;
+            &:hover {
+                background-color: #8A8A9D;
+            }
         }
         span {
             font-family: 'Montserrat';
