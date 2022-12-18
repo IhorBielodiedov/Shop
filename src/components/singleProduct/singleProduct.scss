@@ -1,8 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;400;700&display=swap');
+
 .single-product {
     display: flex;
+    grid-gap: 40px;
+    width: 100%;
+    padding-top: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
     &__img{
-        width: 590px;
-        height: 711px;
-        object-fit: contain;
+        
+        img {
+            width: 590px;
+            height: 711px;
+            object-fit: contain;
+        }
+    }
+    &-info {
+        max-width: 408px;
+        &__label {
+            font-family: 'Josefin Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 72px;
+            line-height: 72px;
+            padding-bottom: 34px;
+        }
+        &__rating {
+            padding-bottom: 56px;
+        }
+        &__price {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 55px;
+        }
+        &__description {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 21px;
+            padding-bottom: 104px;
+        }
+        &__count {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 39px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 18px;
+        }
+        &__button {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 29px;
+            width: 100%;
+            padding: 30px 0;
+            background: none;
+            border: 1px solid black;
+        }
+        span {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 59px;
+            text-align: right;
+        }
     }
 }
