@@ -4,7 +4,7 @@ import {useHttp} from '../../hooks/http.hook';
 const initialState = {
     singleProduct: {},
     productId: 1,
-    singleProductLoadingStatus: 'idle'
+    singleProductLoadingStatus: 'loading'
 }
 
 export const fetchSingleProduct = createAsyncThunk(

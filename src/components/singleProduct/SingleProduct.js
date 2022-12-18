@@ -31,8 +31,8 @@ const SingleProduct = () => {
 
     useEffect(() => {
         dispatch(createId(productId));
-        console.log("load");
-        dispatch(fetchSingleProduct());
+        
+        dispatch(fetchSingleProduct(productId));
         // eslint-disable-next-line
     }, [productId]);
     
@@ -61,17 +61,17 @@ const View = ({data}) => {
     }
     return (
         <div className="single-product">
-            <div className="single-product__img">
-                <img src={data.singleProduct.image}/>
-            </div>
-            <div className="single-product-info">
-                <p className="single-product-info__label">{data.singleProduct.title}</p>
-                <p className="single-product-info__rating" dangerouslySetInnerHTML={{__html:renderRatingStars(data.singleProduct.rating.rate)}}></p>
-                <p className="single-product-info__price">PRICE: <span>{data.singleProduct.price} $</span></p>
-                <p className="single-product-info__description">{data.singleProduct.description}</p>
-                <p className="single-product-info__count">REMAINING <span>{data.singleProduct.rating.count}</span></p>
-                <button className="single-product-info__button">BUY NOW</button>
-            </div>
+        <div className="single-product__img">
+            <img src={data?.singleProduct.image}/>
+        </div>
+        <div className="single-product-info">
+            <p className="single-product-info__label">{data?.singleProduct.title}</p>
+            <p className="single-product-info__rating" dangerouslySetInnerHTML={{__html:renderRatingStars(data?.singleProduct.rating.rate)}}></p>
+            <p className="single-product-info__price">PRICE: <span>{data?.singleProduct.price} $</span></p>
+            <p className="single-product-info__description">{data?.singleProduct.description}</p>
+            <p className="single-product-info__count">REMAINING <span>{data?.singleProduct.rating.count}</span></p>
+            <button className="single-product-info__button">BUY NOW</button>
+        </div>
         </div>
     )
 }
