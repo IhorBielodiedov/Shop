@@ -1,12 +1,9 @@
-import ShopHeader from "../components/shopHeader/ShopHeader";
+import LoginForm from "../components/loginForm/LoginForm";
 
 const LoginPage = () => {
     return (
         <>
-            <ShopHeader/>
-            <div>
-                LoginPage
-            </div>
+            <LoginForm/>
         </>
     )
 }

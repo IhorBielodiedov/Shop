@@ -1,5 +1,5 @@
 import MainPage from '../pages/MainPage';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import LoginPage from '../pages/LoginPage';
 import SingleProductPage from '../pages/SingleProductPage';
 import Page404 from '../pages/404';
@@ -9,10 +9,13 @@ const App = () => {
     <Router>
       <div className="app">
         <Switch>
+          <Route exact path='/'>
+            <Redirect to="/TestTask" />
+          </Route>
           <Route exact path='/login'>
             <LoginPage/>
           </Route>
-          <Route exact path='/'>
+          <Route exact path='/TestTask'>
             <MainPage/>
           </Route>
           <Route exact path='/product/:productId'>
