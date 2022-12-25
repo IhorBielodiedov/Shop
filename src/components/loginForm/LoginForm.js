@@ -1,24 +1,35 @@
-import './loginForm.scss';
+import Form from "./Form";
+import {useHistory} from 'react-router-dom';
+import { useDispatch } from "react-redux";
+import { setUser } from "./userSlice";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const LoginForm = () => {
+    const {push} = useHistory();
+    const dispatch = useDispatch();
+
+    const handleLogin = (email, password) => {
+        const auth = getAuth();
+        console.log(auth);
+        signInWithEmailAndPassword(auth, email, password)
+            .then(({user}) => {
+                console.log(user);
+                dispatch(setUser({
+                    email: user.email,
+                    id: user.uid,
+                    token: user.accessToken,
+                }));
+                localStorage.setItem('id', user.uid);
+                localStorage.setItem('email', user.email);
+                push('/');
+            })
+            .catch(() => alert('Invalid user!'))
+    }
+
     return (
-        <form className='login-form'>
-            <div className='title'>
-                <h1>Agent Login</h1>
-                <p>Hey,Enter Your Detalis To get Sing In Your Account</p>
-            </div>
-            <div className='container'>
-                <input className='login-form__input'
-                        placeholder='Enter Your Email-Phone No'></input>
-            </div>
-            <div className='container'>
-                <input className='login-form__input'
-                        placeholder='Password'></input>
-            </div>
-            <div className='container'>
-                <button type="submit" className='login-form__button'>Sign In</button>
-            </div>
-        </form>
+       <Form 
+        handleClick={handleLogin}
+       /> 
     )
 }
 
