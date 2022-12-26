@@ -26,7 +26,7 @@ const ShopListItem = ({title, price, image, rating}) => {
                 </div>
             <div className='shop-list-label'>
                 <div>
-                    <p className='shop-list-label__name'>`${title.slice(0, 15)}...`</p>
+                    <p className='shop-list-label__name'>{title.slice(0, 15)}...</p>
                     <div className='shop-list-label__rating' dangerouslySetInnerHTML={{__html:renderRatingStars(rating.rate)}}></div>
                 </div>
                 <p className='shop-list-label__price'><span className='shop-list-label__dollar'>$</span>{price}</p>

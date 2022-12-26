@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;400;700&display=swap');
 
+.header-bg{
+    background: #ffffff;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    height: 77px;
+    width: 100%;
+}
 .single-product {
-    position: relative;
-    top:-77px;
     display: flex;
     grid-gap: 40px;
     width: 100%;
