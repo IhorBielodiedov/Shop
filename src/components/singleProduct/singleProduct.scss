@@ -36,6 +36,8 @@
             font-size: 72px;
             line-height: 72px;
             padding-bottom: 34px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             overflow: hidden;
         }
         &__rating {

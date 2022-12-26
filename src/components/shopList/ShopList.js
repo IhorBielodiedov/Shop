@@ -58,7 +58,7 @@ const ShopList = () => {
                 {setContent(productsLoadingStatus, () => renderProductsList(products), newItemLoading)}
             </div>
             <button className='shop-list__button'
-            disabled={newItemLoading}
+            disabled={newItemLoading || productsLoadingStatus === 'loading'}
             onClick={() => pagination(9)}
             >
                 Load More
