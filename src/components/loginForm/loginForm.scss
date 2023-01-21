@@ -1,75 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Montserrat:wght@300;400;700&display=swap");
 
 .login-form {
-    position: relative;
-    top: 50px;
-    background: #FFFFFF;
-    border: 1px solid #FBD0D0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 46px;
-    max-width: 707px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 26px;
-    padding: 19px 0 40px 0;
-    .title {
-        max-width: 464px;
-        grid-gap: 25px;
-        padding-bottom: 53px;
-        h1 {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 45px;
-            line-height: 45px;
-            text-align: center;
-            padding-bottom: 26px;
-        }
-        p {
-            font-family: 'Josefin Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 30px;
-            line-height: 30px;
-            text-align: center;
-        }
+  position: relative;
+  top: 50px;
+  background: #ffffff;
+  border: 1px solid #fbd0d0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 46px;
+  max-width: 707px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 26px;
+  padding: 19px 0 40px 0;
+  .title {
+    max-width: 464px;
+    grid-gap: 25px;
+    padding-bottom: 53px;
+    h1 {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 45px;
+      line-height: 45px;
+      text-align: center;
+      padding-bottom: 26px;
     }
-    .container {
-        width: 590px
+    p {
+      font-family: "Josefin Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
     }
-    &__input {
-        display: block;
-        width: 100%;
-        max-width: 590px;
-        background: #FFFFFF;
-        border: 1px solid #BAB5B5;
-        border-radius: 10px;
-        font-family: 'Josefin Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 22px;
-        color: #878282;
-        padding: 30px 0 20px 13px;
+  }
+  .container {
+    width: 590px;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    max-width: 590px;
+    background: #ffffff;
+    border: 1px solid #bab5b5;
+    border-radius: 10px;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 22px;
+    color: #878282;
+    padding: 30px 0 20px 13px;
+  }
+  &__button {
+    display: block;
+    width: 100%;
+    background: #90c38a;
+    border: 1px solid #bab5b5;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    padding: 17px 0;
+    display: block;
+    max-width: 590px;
+    cursor: pointer;
+    &:hover {
+      background: #90c40a;
     }
-    &__button {
-        display: block;
-        width: 100%;
-        background: #90C38A;
-        border: 1px solid #BAB5B5;
-        border-radius: 10px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 38px;
-        padding: 17px 0;
-        display: block;
-        max-width: 590px;
-        cursor: pointer;
-        &:hover {
-            background: #90C40A;
-        }
-    }
+  }
 }

@@ -1,16 +1,16 @@
 * {
-    font-family: "Roboto Condensed", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 ul,
 li,
 dl {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -19,37 +19,37 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+  margin: 0;
 }
 
 a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  &:hover {
     text-decoration: none;
     color: inherit;
-    display: inline-block;
-    &:hover {
-        text-decoration: none;
-        color: inherit;
-    }
+  }
 }
 
 p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; 
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.app{
-    padding: 0;
+.app {
+  padding: 0;
 }
 main {
-    margin-top: 50px;
-    position: relative;
+  margin-top: 50px;
+  position: relative;
 }
 body {
-    background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }

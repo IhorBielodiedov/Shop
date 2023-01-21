@@ -1,44 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;800&display=swap");
 .shop {
-    &__header{
-        position: relative;
-        max-width: 1040px;
-        margin: 0 auto;
-        background: #FFFFFF;
-        box-shadow: 5px 5px 75px rgba(210, 213, 234, 0.45);
-        border-radius: 6px 0px 0px 6px;
-        z-index: 2;
-    }
-    &__menu {
-        padding: 20px 22px;
-        ul {
-            display: flex;
-            justify-content: space-between;
-            font-family: 'Open Sans';
-            font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 33px;
-            color: #8A8A9D;
-            li {
-                &:hover {
-                    color: #8A8A6D;
-                }
-                button {
-                    font-family: 'Open Sans';
-                    font-style: normal;
-                    font-weight: 600;
-                    font-size: 24px;
-                    line-height: 33px;
-                    color: #8A8A9D;
-                    background: none;
-                    border: none;
-                    cursor: pointer;
-                    &:hover {
-                        color: #8A8A6D;
-                    }
-                }
-            }
+  &__header {
+    position: relative;
+    max-width: 1040px;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 5px 5px 75px rgba(210, 213, 234, 0.45);
+    border-radius: 6px 0px 0px 6px;
+    z-index: 2;
+  }
+  &__menu {
+    padding: 20px 22px;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 33px;
+      color: #8a8a9d;
+      li {
+        &:hover {
+          color: #8a8a6d;
         }
+        button {
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 33px;
+          color: #8a8a9d;
+          background: none;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            color: #8a8a6d;
+          }
+        }
+      }
     }
+  }
 }
